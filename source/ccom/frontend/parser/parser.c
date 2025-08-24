@@ -68,7 +68,7 @@ static ASTNode *relational(void) {
         } else if (consume(">")) {
             node = new_binary_node(AST_NODE_LT, add(), node);
         } else if (consume(">=")) {
-            node = new_binary_node(AST_NODE_LT, add(), node);
+            node = new_binary_node(AST_NODE_LE, add(), node);
         } else {
             return node;
         }
